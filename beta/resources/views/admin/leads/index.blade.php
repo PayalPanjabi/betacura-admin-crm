@@ -34,6 +34,7 @@
       <h3 class="card-title">
         {{__('Leads table')}}
       </h3>
+     
         <a href="{{route('admin.leads.create')}}" class="btn btn-primary btn-sm float-right">
           <i class="fa fa-plus"></i> {{ __('Create') }}
         </a>
@@ -105,7 +106,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-4">
+          <div class="col-lg-3">
             <div class="dataTables_length" id="visits_table_length">
               <label>Show
                 <select name="visits_table_length" aria-controls="visits_table" class="custom-select custom-select-sm form-control form-control-sm">
@@ -119,7 +120,7 @@
                 </select> records</label>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-3">
             <div class="dt-buttons btn-group flex-wrap">
               <button class="btn btn-secondary buttons-copy buttons-html5" tabindex="0" aria-controls="visits_table" type="button" title="Copy"><span><i class="fas fa-copy"></i> Copy</span></button>
               <button class="btn btn-secondary buttons-excel buttons-html5" tabindex="0" aria-controls="visits_table" type="button" title="Excel"><span><i class="fas fa-file-excel"></i> Excel</span></button>
@@ -130,7 +131,16 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-3">
+            <!-- <label for="status">{{__('Status')}}</label> -->
+            <select name="status" placeholder="{{__('Status')}}" 
+                class="form-control select2" required>
+                <option value="" >Select status</option>
+                <option value="Partners1">Completed</option>
+                <option value="Partners2">Pending</option>
+            </select>
+          </div>
+          <div class="col-lg-3">
             <div id="visits_table_filter" class="dataTables_filter" style="float:right">
               <label>Search:
                 <input type="search" class="form-control form-control-sm" placeholder="" aria-controls="visits_table">
@@ -147,12 +157,15 @@
               </th>
               <th width="10px">#</th>
               <th>{{__('Client')}}</th>
+              <th>{{__('Member ID')}}</th> 
               <!-- <th>{{__('City')}}</th>
               <th>{{__('BC')}}</th>
               <th>{{__('Package Name')}}</th> -->
               <th>{{__('Customer Name')}}</th>
               <th>{{__('Appointment Date')}}</th>
               <th>{{__('Contact Number')}}</th>
+              <th>{{__('City')}}</th>
+              <th>{{__('Pincode')}}</th>
               <!-- <th>{{__('Age')}}</th>
               <th>{{__('Gender')}}</th>
               <th>{{__('Email id')}}</th>
@@ -161,7 +174,7 @@
               <th>{{__('Appointment 2')}}</th>
               <th>{{__('Payment Mode')}}</th>
               <th>{{__('Remark')}}</th> -->
-              <th>{{__('Member ID')}}</th> 
+              
               <th width="100px">{{__('Action')}}</th>
             </tr>
             
@@ -174,12 +187,15 @@
               <td width="10px">01</td>
               
               <td>ABC</a></td>
+              <td>1101</td>
                 <!-- <td>Pune</td>
               <td>gfds nbfbyugfuyd</td>
               <td>Package Name1</td> -->
               <td><a href="{{route('admin.leadsdetails')}}" >payal panjabi</a></td>
               <td>2022-01-12</td>
               <td><a href="tel:+91 9876543210"> <i class="fas fa-phone-alt"></i> &nbsp;9876543210</a></td>
+              <td>Pune</td>
+              <td>411065</td>
               <!-- <td>18</td>
               <td>Female</td>
               <td>payal@gmail.com</td>
@@ -188,7 +204,7 @@
               <td>-</td>
               <td>UIP</td>
               <td>fhdsgfbmndjgus hgdyugyfdsb</td> -->
-              <td>1101</td>
+              <!-- <td>1101</td> -->
               <td width="100px">{{__('Action')}}</td>
             </tr>
             </tbody>

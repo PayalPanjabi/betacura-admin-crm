@@ -80,7 +80,7 @@
                   </div>
                 </div>
                 <!-- ./col -->
-                <div class="col-lg-2 col-sm-12 col-xs-12 mt-4 mb-4 custom-primary-box">
+                <!-- <div class="col-lg-2 col-sm-12 col-xs-12 mt-4 mb-4 custom-primary-box">
                   <div class="row">
                     <div class="col-3 col-sm-4 col-xs-4">
                       <span class="text-center icon">
@@ -95,7 +95,7 @@
                       </span>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <!-- ./col -->
                 <div class="col-lg-2 col-sm-12 col-xs-12 mt-4 mb-4 custom-primary-box">
                   <div class="row">
