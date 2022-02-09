@@ -27,6 +27,14 @@
         </a>
       </li>
 
+      <li class="nav-item">
+        <a href="{{route('admin.calling.index')}}" class="nav-link" id="calling">
+        <i class="nav-icon fas fa-phone-alt"></i>
+          <p>
+            {{__('Calling')}}
+          </p>
+        </a>
+      </li>
 
       @can('view_group')
       <li class="nav-item">

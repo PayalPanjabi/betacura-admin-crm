@@ -18,6 +18,7 @@ Route::group(['namespace'=>'Auth','prefix'=>'admin/reset','as'=>'admin.reset.'],
 
 //admin controls 
 Route::get('leadsdetails','LeadsController@leadsdetails')->name('leadsdetails');//datatable
+Route::get('callingdetails','CallingController@callingdetails')->name('callingdetails');//datatable
 
 Route::group(['prefix'=>'admin','as'=>'admin.','namespace'=>'Admin','middleware'=>['Admin','Branch']],function(){
     //dashboard
@@ -39,6 +40,11 @@ Route::group(['prefix'=>'admin','as'=>'admin.','namespace'=>'Admin','middleware'
     Route::resource('leads','LeadsController');
 
     Route::get('leadsdetails','LeadsController@leadsdetails')->name('leadsdetails');//datatable
+
+    // calling
+    Route::resource('calling','CallingController');
+    Route::get('callingdetails','CallingController@callingdetails')->name('callingdetails');//datatable
+
 
     //tests and its components
     Route::resource('tests','TestsController');

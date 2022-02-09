@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    {{__('Leads')}}
+    {{__('Calling')}}
 @endsection
 @section('css')
     <link rel="stylesheet" href="{{url('plugins/swtich-netliva/css/netliva_switch.css')}}">
@@ -13,13 +13,13 @@
         <div class="col-sm-6">
           <h1 class="m-0 text-dark">
             <i class="fa fa-tasks"></i>
-            {{__('Leads')}}
+            {{__('Calling')}}
           </h1>
         </div><!-- /.col -->
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="{{route('admin.index')}}">{{__('Home')}}</a></li>
-            <li class="breadcrumb-item active">{{__('Leads')}}</li>
+            <li class="breadcrumb-item active">{{__('Calling')}}</li>
           </ol>
         </div><!-- /.col -->
       </div><!-- /.row -->
@@ -32,10 +32,10 @@
 <div class="card card-primary card-outline">
     <div class="card-header">
       <h3 class="card-title">
-        {{__('Leads table')}}
+        {{__('Calling table')}}
       </h3>
      
-        <a href="{{route('admin.leads.create')}}" class="btn btn-primary btn-sm float-right">
+        <a href="{{route('admin.calling.create')}}" class="btn btn-primary btn-sm float-right">
           <i class="fa fa-plus"></i> {{ __('Create') }}
         </a>
       
@@ -191,7 +191,7 @@
                 <!-- <td>Pune</td>
               <td>gfds nbfbyugfuyd</td>
               <td>Package Name1</td> -->
-              <td><a href="{{route('admin.leadsdetails')}}" >payal panjabi</a></td>
+              <td><a href="{{route('admin.callingdetails')}}" >XYZ</a></td>
               <td>2022-01-12</td>
               <td><a href="tel:+91 9876543210"> <i class="fas fa-phone-alt"></i> &nbsp;9876543210</a></td>
               <td>Pune</td>
@@ -206,9 +206,8 @@
               <td>fhdsgfbmndjgus hgdyugyfdsb</td> -->
               <!-- <td>1101</td> -->
               <td width="100px">
-                <!-- {{__('Action')}} -->
-             
-                <ul style="list-style: none;">
+                  <!-- {{__('Action')}} -->
+                  <ul style="list-style: none;">
                   <li style="display:inline;padding: 4px;  margin-left: -57px;">
                     <a href="#" class="btn btn-primary btn-flat btn-sm manage_service"> 
                       <i class="fas fa-edit"></i> 
@@ -221,7 +220,7 @@
                    
                   </li>
                 </ul>
-
+                
               </td>
             </tr>
             </tbody>
@@ -236,7 +235,7 @@
   <script>
     var can_delete=@can('delete_category')true @else false @endcan
   </script>
-  <script src="{{url('js/admin/leads.js')}}"></script>
+  <script src="{{url('js/admin/calling.js')}}"></script>
   <!-- Switch -->
   <script src="{{url('plugins/swtich-netliva/js/netliva_switch.js')}}"></script>
 
